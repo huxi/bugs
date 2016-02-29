@@ -1,0 +1,16 @@
+package foo;
+
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@EnableAutoConfiguration
+public class AppSpringConfig
+{
+	@Bean
+	public Service someService()
+	{
+		return new Service();
+	}
+}
