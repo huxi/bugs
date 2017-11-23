@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+    	jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+    }
+}
+
+wrapper {
+    gradleVersion = '4.4-rc-1'
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+
+defaultTasks 'build', 'shadowJar'
